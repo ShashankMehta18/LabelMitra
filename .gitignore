@@ -1,0 +1,16 @@
+sih-backend/venv/
+sih-frontend/node_modules/
+sih-frontend/.vite/
+.env
+*.zip
+__pycache__/
+*.pyc
+# ShadowTrace
+
+Placeholder for `.gitignore`.
+
+This file is part of the final SIH repository structure. Team members can replace this placeholder with the implementation.
+sih-backend/venv/ 
+sih-frontend/node_modules/ 
+sih-frontend/.vite/ 
+.env 
