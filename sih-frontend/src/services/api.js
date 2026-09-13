@@ -44,7 +44,7 @@ export async function sendConsumerScan(file) {
   formData.append("file", file, file.name);
 
   const response = await fetch(
-    "http://127.0.0.1:8000/consumer/scan",
+  `${API_BASE_URL}/consumer/scan`,
     {
       method: "POST",
       body: formData,
