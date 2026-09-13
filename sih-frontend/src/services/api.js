@@ -6,35 +6,33 @@ export const API_BASE_URL =
 
 export async function sendScan({ establishment, location, inspector, photos }) {
   const formData = new FormData();
+  formData.append("establishment_name", establishment);
+  formData.append("location", location);
+  formData.append("inspector_name", inspector);
 
-  if (photos.length > 0) {
-    formData.append("file", photos[0].file, photos[0].file.name);
-  }
+  photos.forEach((item, index) => {
+    formData.append("photos", item.file, item.file.name);
+    formData.append("photo_types", item.type);
+    formData.append("photo_indexes", String(index + 1));
+  });
 
   const response = await fetch(`${API_BASE_URL}/scan`, {
     method: "POST",
-    body: formData,
+    body: formData
   });
 
   if (!response.ok) {
     let message = "Backend request failed.";
-
     try {
       const body = await response.json();
-
-      message =
-        typeof body.detail === "string"
-          ? body.detail
-          : body.detail
-            ? JSON.stringify(body.detail)
-            : body.message || message;
+      message = body.detail || body.message || message;
     } catch {}
-
     throw new Error(message);
   }
 
   return response.json();
 }
+
 export async function sendConsumerScan(file) {
   if (!file) {
     throw new Error("Please select a product label image.");

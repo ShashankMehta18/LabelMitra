@@ -5,7 +5,7 @@ export default function Layout({ children }) {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark">LM</div>
+          <div className="brand-mark"><img src="/assets/labelmitra-mark.png" alt="LabelMitra" /></div>
           <div className="brand-copy">
             <strong>LabelMitra</strong>
             <small>AI-powered label assistant</small>
