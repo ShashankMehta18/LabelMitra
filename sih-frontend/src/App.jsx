@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Scan from "./pages/Scan";
 import Result from "./pages/Result";
 import Consumer from "./pages/consumer";
-import ConsumerResult from "./pages/consumerResult";
+import ConsumerResult from "./pages/ConsumerResult";
 
 export default function App() {
   return (
