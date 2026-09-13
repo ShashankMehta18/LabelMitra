@@ -3,8 +3,8 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Scan from "./pages/Scan";
 import Result from "./pages/Result";
-import Consumer from "./pages/Consumer";
-import ConsumerResult from "./pages/ConsumerResult";
+import Consumer from "./pages/consumer";
+import ConsumerResult from "./pages/consumerResult";
 
 export default function App() {
   return (
